@@ -1,11 +1,11 @@
-# DummySite
+# Makie&Documenter Videostream testing
 
+#### A first example to show that plotting works
 ```@example
 using CairoMakie
 
 fig = Figure()
-display(fig)
-vs = VideoStream(fig)
-recordframe!(vs)
-save("empty_testmovie.mp4", vs)
+ax = Axis(fig[1,1])
+scatter!(ax, rand(100))
+fig
 ```

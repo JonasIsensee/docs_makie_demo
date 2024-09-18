@@ -1,12 +1,17 @@
 using Documenter
 using Documenter.Remotes: GitLab
+using CairoMakie
 makedocs(;
-    sitename = "InPartS.jl",
-    build = "build",
+    sitename = "MakieVideostream-TestingSite",
     clean = true,
-    doctest = false,
-    draft=true,
-    repo = GitLab("gitlab.gwdg.de", "eDLS", "InPartSDocs"),
-    #pages = [],
-    warnonly = [:cross_references, :missing_docs],
+    remotes = nothing,
+    draft = false,
+    pagesonly = true,
+    pages = [
+        "justfigure" => "index.md",
+        "record" => "record.md",
+        "just_error" => "just_error.md",
+        "error_record" => "error_record.md",
+        "videostream" => "videostream.md",
+    ]
 )
